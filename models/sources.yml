@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: practice_schema
+    database: INTERNAL_TRAINING
+    schema: PRACTICE_SCHEMA
+    tables:
+      - name: orders
+      - name: products
+      - name: customers
