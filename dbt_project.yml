@@ -36,7 +36,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
-    # Applies to all files under models/example/
+  my_new_project:   # replace with your project name
     example:
-      +materialized: table
+      my_first_dbt_model:
+        +pre-hook:
+          - "insert into audit_table(model_name, run_time, status) values ('my_first_dbt_model', current_timestamp, 'STARTED')"
+        +post-hook:
+          - "insert into audit_table(model_name, run_time, status) values ('my_first_dbt_model', current_timestamp, 'COMPLETED')"
+

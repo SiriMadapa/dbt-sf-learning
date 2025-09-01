@@ -7,11 +7,21 @@ models:
     columns:
       - name: order_id
         description: "Unique ID for each order"
+        tests:
+          - not_null
+          - unique
       - name: customer_id
         description: "Customer who placed the order"
+        tests:
+          - not_null
 
   - name: my_first_dbt_model
     description: "Final model built on top of ephemeral staging"
     columns:
       - name: id
         description: "Cleaned ID without nulls"
+        tests:
+          - not_null
+          - unique
+
+

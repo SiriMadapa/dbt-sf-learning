@@ -13,4 +13,3 @@ select *
 from {{ ref('stg_source_data_ephemeral') }}
 where id is not null
 
-

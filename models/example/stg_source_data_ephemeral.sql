@@ -1,4 +1,7 @@
-{{ config(materialized='ephemeral') }}
+{{ config(
+    materialized='table',
+    snowflake_warehouse='COMPUTE_WH'   
+) }}
 
 with source_data as (
 
