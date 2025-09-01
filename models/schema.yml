@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: practice_training        
-    schema: PRACTICE_TRAINING      
+  - name: practice_training
+    schema: PRACTICE_TRAINING
     tables:
-      - name: customers          
+      - name: customers
